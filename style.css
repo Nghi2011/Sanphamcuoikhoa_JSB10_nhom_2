@@ -1,0 +1,335 @@
+#login{
+    display: flex;
+    justify-content: center;
+}
+#password {
+    width: 100%;
+    max-width: 1000px;
+}
+.img-fluid{
+    border-radius: 0px;
+}
+#About_us{
+    background: skyblue;
+    display: flex;
+    justify-self: center;
+    /* justify-content: center; */
+    width: 1000px;
+}
+.container{
+    display: grid;
+    /* justify-content: space-around; */
+}
+#Image1{
+    position: relative;
+    left: 125px;
+}
+p{
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-style: italic;
+    color: #074799;
+}
+#About_us{
+    display: flex;
+    /* justify-content: space-around; */
+    margin-top: 50px;
+}
+#Body{
+    margin-top: 250px;
+    background: #155E95;
+    overflow: hidden;
+}
+.fa{
+    font-size: 100px;
+    position: relative;
+    left:80px;
+    color:#74C0FC
+}
+#Voucher{
+    display: flex;
+}
+#Travel_packs{
+    display: grid;
+    justify-content: space-around ;
+    grid-template-columns: auto auto auto;
+    /* border: 1px #9bddff solid;
+    background:none; */
+}
+/* .montserrat{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+} */
+.merriweather-light {
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+.bree-serif-regular{
+  font-family: "Bree Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+#Image1{
+    border-radius: 100px;
+}
+#Our_member{
+    margin-top: 80px;
+}
+#Header{
+    background: #578FCA;
+}
+#carouselExampleCaptions{
+    margin-top: 100px;
+    background:#A1E3F9;
+}
+#Jumbotron{
+    height: 500px;
+    background: url(Untitled\ design.png);
+    background-size:cover;
+    text-align: center;
+}
+.lato-bold {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+.lato-black-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  color: #7091F5;
+}
+.inter-normal {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: italic;
+  }
+.lato-bold-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+  /* color: #A8CD9F; */
+  color: #6699cc;
+  font-size: xx-large;
+}
+.Blockquote{
+    border: 1px #4cb5c5 solid;
+    border-radius: 90px;
+    width: 800px;
+    background: #ace5ee ;
+    justify-self: center;
+    text-align: center;
+}
+.sigmar-regular {
+    font-family: "Sigmar", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+.lato-regular-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+#login{
+    display: flex;
+    justify-content: end;
+}
+#password {
+    width: 100%;
+    max-width: 1000px;
+}
+.Destination_image{
+    border-radius: 50px;
+}
+/* .VN1{
+    border-top: 1px #FFF574 solid;
+    border-bottom: 1px #FFF574 solid;
+    border-left: 1px #FA4032 solid;
+    border-right: 1px #FA4032 solid;
+} */
+#dropdown{
+    background: #2DAA9E;
+    border: 5px #80CBC4 solid;
+    border-radius: 20px;
+}
+.Buy_button{
+    border: 1px #578FCA solid ;
+    border-radius: 50px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    color: #A1E3F9;
+}
+.Buy_button:hover{
+    background-color: #C7D9DD;
+    color: #9ACBD0;
+    animation-name:Scroll2 ;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 4;
+}
+/* .Move1,.Move2,.Move3{
+    position: relative;
+    right: 1700px;
+} */
+#Move1,#Move2,#Move3{
+    position: relative;
+    right: 1700px;
+}
+/* small{
+    
+} */
+html{
+    scroll-behavior:smooth;
+}
+#DIV{
+    /* display: flex;
+    width: 100px;
+    height: 100px;
+    background: red; */
+    /* transition: width 2s,height 2s,transform 1s;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275); */
+    animation-duration: 3s;
+    animation-name:hello ;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+  }
+  @keyframes hello{
+    0%{
+      opacity: 100%;
+    }
+    50%{
+      transform: rotate(170deg);
+      border-radius: 100px;
+      opacity: 0%;
+      scale: 2;
+    }
+    /* 100%{
+        transform: rotate(190deg);
+    } */
+  }
+  /* #DIV:hover{
+    width: 200px;
+    height: 200px;
+    /* transform: rotate(360deg); */
+.shake{
+    animation-duration: 2s;
+    animation-name: shake;
+    animation-iteration-count: infinite;
+    /* @keyframes shake{
+        0%{
+
+        }
+        50%{
+            transform: rotate(90);
+            scale: 2;
+        }
+    } */
+}
+@keyframes Shake{
+    0%,
+    20%,
+    40%,
+    60%,
+    80%,
+    100%{
+      transform: rotate(-1deg);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90%{
+        transform: rotate(1deg);
+    }
+}
+/* #Card{
+
+} */
+     /* display: flex; */
+    /* .move1{
+        animation-name: ;
+        animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        animation-duration: 2s;
+        animation-iteration-count:1;  
+        animation-fill-mode: forwards;
+    }
+    .move2{
+        animation-name: Animation2;
+        animation-timing-function:cubic-bezier(0.455, 0.03, 0.515, 0.955) ;
+        animation-duration: 3s;
+        animation-iteration-count:1;  
+        animation-fill-mode: forwards;
+    }
+    .move3{
+        animation-name: Animation3;
+        animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        animation-duration: 4s;
+        animation-iteration-count:1;  
+        animation-fill-mode: forwards;
+    }   */
+    @keyframes Animation{
+        50%{
+          transform:translateX(-100px);
+        }
+        80%{
+           transform:translateX(1000px);
+         }
+        100%{
+            transform:translateX(1050px);
+          }
+    }
+    @keyframes Animation1{
+        100%{
+           /* width: 200px;
+          height: 200px; */
+          transform:translateX(1910px);
+        }
+    }
+    @keyframes Animation2{
+        100%{
+           /* width: 200px;
+          height: 200px; */
+          transform:translateX(1920px);
+        }
+    }
+    @keyframes Animation3{
+        100%{
+           /* width: 200px;
+          height: 200px; */
+          transform:translateX(1930px);
+        }
+    }
+
+@keyframes Scroll2{
+    from{
+        transform: translateY(-1px);
+    }
+    to{
+
+        transform: translateY(1px) ;
+    }
+    }
+#Travel_location{
+    display: flex;
+}
+#Địa_điểm{
+    position: relative;
+    left: 400px;
+    margin-top: 10px;
+    background: #51829B;
+    width: 800px;
+    border-radius: 10px;
+}
+/* ,.move2,.move3,.move1,,.move3,.move1,.move2, */
+#Button{
+    position: relative;
+    left: 360px;
+    background: #bbe9ff;
+    border: none;
+}

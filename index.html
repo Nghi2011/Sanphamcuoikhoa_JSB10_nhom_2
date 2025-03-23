@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vietour</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Cinzel:wght@400..900&family=Dancing+Script:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sigmar&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon_io/favicon.ico">
+
+</head>
+<style>
+  @keyframes Enlarge{
+      0%{}
+      100%{
+        width: 2000px;
+      }
+    
+  }
+  @keyframes Expand{
+      0%{}
+      100%{
+        height: 640px;
+      }
+    
+  }
+    @keyframes Scroll1{
+      from{
+        opacity: 0;
+      }
+      to{
+        opacity: 100%;
+        transform: translateY(10px) ;
+      }
+    }
+    .alert{
+      width: 2000px;
+      animation-name: Scroll1;
+      animation-duration: 1s;
+      /* animation-name: Shake;
+      animation-duration: 1s; */
+      animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      animation-fill-mode: forwards;
+    }
+    body{
+      overflow-x: hidden;
+    }
+    /* #popover{
+      width: 1000px;
+      height: 100px;
+       border:none;
+       overflow: visible;
+    } */
+</style>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <symbol id="check-circle-fill" viewBox="0 0 16 16">
+      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+    </symbol>
+    <symbol id="info-fill" viewBox="0 0 16 16">
+      <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+    </symbol>
+    <symbol id="exclamation-triangle-fill" viewBox="0 0 16 16">
+      <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+    </symbol>
+  </svg>
+   <div id="Header">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Vietour<i class="fa-sharp fa-solid fa-plane-departure" style="color: #A6F1E0;"></i></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+
+              <a class="nav-link active" aria-current="page" href="#">                <i class="fa-solid fa-house"></i>Trang chủ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Diaiemdulich.html">Đặt vé du lịch</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Mở rộng 
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#Travel_packs">Gói du lịch</a></li>
+                <li><a class="dropdown-item" href="#Title_About_us">Về chúng tôi</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#Sign_in/Log_in">Đăng ki/Đăng nhập</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a style="display: flex;" class="nav-link disabled" aria-disabled="true">
+                <h5>Vietnam</h5><img width="25" height="25" src="https://img.icons8.com/fluency/96/vietnam-circular.png" alt="vietnam-circular"/>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div id="Jumbotron">
+      <h1 class="lato-black-italic ">Vietour</h1>
+      <blockquote class="lato-bold-italic Blockquote">Nền tảng du lịch thế giới ở Việt Nam ! </blockquote>
+      <div id="DIV">
+        <img style="border-radius: 100px;" width="300px" height="300px" src="Add a heading.png" class="img-fluid" alt="...">
+      </div>
+      
+    </div>
+    <div id="carouselExampleCaptions" class="carousel slide">
+      <div  class="carousel-inner">
+        <div class="carousel-item active">
+         <img id="Image1" width="1280px" height="853x" src="https://images.pexels.com/photos/3278215/pexels-photo-3278215.jpeg?cs=srgb&dl=pexels-freestockpro-3278215.jpg&fm=jpg" class="img-fluid" alt="..."> 
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="h5.a">Bắt đầu một chuyến đi mới</h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img id="Image1" width="1280px" height="853px" src="sunset-2983614_1280.jpg" class="img-fluid" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Việt Nam </h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img id="Image1" width="1290px" height="823px" src="skyscrapers-1435072_1280.jpg" class="img-fluid" alt="..."> 
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Singapore </h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img id="Image1" width="1280px" height="853px" src="grand-central-terminal-5075970_1280.jpg" class="img-fluid" alt="..."> 
+          <div class="carousel-caption d-none d-md-block">
+            <h5>New York </h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img id="Image1" width="1280px" height="853px" src="travel-5188598_1280.jpg" class="img-fluid" alt="..."> 
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Barcelona </h5>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+   </div>
+   <br>
+   <br>
+   <div id="Body">
+    <div id="Search_bar">
+      <div class="container-fluid" style="background:#72BAA9">
+        <h1 class="display-2 shake" style="font-family: Dancing Script, cursive;text-align: center;">Hôm nay bạn muốn gì ?</h1>
+        <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Tìm kiếm" aria-label="Search">  
+        <button class="btn btn-outline-success" type="submit">                   <i class="fa-solid fa-magnifying-glass fa-beat" style="color:#1B4D3E;"></i>Search</button>    
+        </form>
+      </div>
+      
+    </div>
+    
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#Header">Trang chủ</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Về Chúng tôi</li>
+      </ol>
+    </nav>
+    <h1 class="display-2" id="Title_About_us" style="border: 2px #A6F1E0 solid ;border-radius:50px;text-align: center;">Về chúng tôi <i class="fa-solid fa-earth-asia fa-xl fa" style="color: #74C0FC;"></i> </h1>
+    <div id="About_us">
+      <button id="Button" onclick="Show_content()">
+        <img style="border-radius: 100px;" width="300px" height="300px" src="Add a heading.png" class="img-fluid Animation" alt="...">
+      </button>
+      <div class="card " id="Move1" style="width: 18rem">
+        <i class="fa-solid fa-mountain-sun fa "></i><p></p>
+        <div class="card-body">
+          <p >Là một trang web du lịch , chúng tôi được xây dựng nhằm đáp ứng các yêu cầu du lịch ở Việt Nam .</p>
+        </div>
+      </div>
+      <div class="card " id="Move2" style="width: 18rem">
+        <i class="fa-duotone fa-regular fa-thumbs-up fa" style="--fa-primary-color: #0f9edb; --fa-secondary-color: #119ad4;"></i>
+        <div class="card-body">
+          <p class="card-text">Chúng tôi luôn đặt đầu lợi ích và sự chăm sóc đối với khách hàng</p>
+        </div>
+      </div>
+      <div class="card " id="Move3" style="width: 18rem">
+        <i class="fa-solid fa-globe fa" style="color: #A1E3F9;"></i>
+        <div class="card-body">
+          <p class="card-text">Tại đây , bạn có thể tìm kiếm và đặt vé du lịch dễ dàng mà không sợ hết tiền !</p>
+        </div>
+      </div>
+      <div id="Card"></div>
+    <br>
+    <br>
+    </div>
+    <h1 class="display-2" style="border: 2px #D3F1DF solid ;border-radius:50px;text-align: center;position: static;">Đội ngũ nhân viên</h1>
+    <br>
+    <div id="Our_member">
+      <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded container" id="Container" style="height: 300px;display: flex; justify-content: space-around;">
+        <div class="card" style="width: 18rem;height: 190px;;">
+          <i class="fa-sharp fa-solid fa-circle-user fa" style="color: #6E8E59;"></i>
+          <div class="card-body" >
+            <h5 class="card-title montserrat bree-serif-regular" >Huỳnh Duy Khang</h5>
+            <div class="Dropdown_container">
+              <button class="btn bg-info-subtle dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" onclick="Expand()" onmouseleave="Revert()">
+                  Tìm hiểu thêm
+                  </button>
+                <ul class="dropdown-menu" style="width: 640px;">
+                  <dl class="row bg-info-subtle" style="width: 590px;position: relative;left: 37px;">
+                      <dt class="col-sm-3">Tên :</dt>
+                      <dd class="col-sm-9">Huỳnh Duy Khang</dd>
+                    
+                      <dt class="col-sm-3">Học tại :</dt>
+                      <dd class="col-sm-9">
+                        <p>Trường Nguyễn An Khương.</p>
+                        <p>Lớp 9A4.</p>
+                      </dd>
+                    
+                      <dt class="col-sm-3">Tuổi :</dt>
+                      <dd class="col-sm-9">Tuổi 15 (4/12/2010).</dd>
+                    
+                      <dt class="col-sm-3 text-truncate">Giới tính</dt>
+                      <dd class="col-sm-9">Nam</dd>
+                    
+                      <dt class="col-sm-3">Sở thích</dt>
+                      <dd class="col-sm-9">
+                        <dl class="columns">
+                          <dd class="col-sm-8">Chơi thể thao.</dd>
+                          <dt class="col-sm-4">Chơi cờ vua.</dt>
+                          <dt class="col-sm-4">Lập trình game.</dt>
+                        </dl>
+                      </dd>
+                    </dl>
+                </ul>
+          </div>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;height: 190px;">
+            <i class="fa-sharp fa-solid fa-circle-user fa" style="color: #CAE0BC;"></i>
+            <div class="card-body">
+              <h5 class="card-title bree-serif-regular">Đoàn Minh Nghị</h5>
+              <div class="Dropdown_container">
+                <button class="btn bg-success-subtle dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" onclick="Expand()" onmouseleave="Revert()">
+                    Tìm hiểu thêm
+                    </button>
+                  <ul class="dropdown-menu" style="width: 640px;">
+                    <dl class="row bg-info-subtle" style="width: 590px;position: relative;left: 37px;">
+                      <dt class="col-sm-3">Tên :</dt>
+                      <dd class="col-sm-9">Đoàn Minh Nghị.</dd>
+                    
+                      <dt class="col-sm-3">Học tại :</dt>
+                      <dd class="col-sm-9">
+                        <p>Trường Nguyễn Văn Linh. </p>
+                        <p>Lớp 8/7.</p>
+                      </dd>
+                    
+                      <dt class="col-sm-3">Tuổi :</dt>
+                      <dd class="col-sm-9">14 tuổi (10/12/2011).</dd>
+                    
+                      <dt class="col-sm-3 text-truncate">Giới tính</dt>
+                      <dd class="col-sm-9">Nam</dd>
+                    
+                      <dt class="col-sm-3">Sở thích</dt>
+                      <dd class="col-sm-9">
+                        <dl class="columns">
+                          <dt class="col-sm-4">Lập trình game.</dt>
+                          <dd class="col-sm-8">Đọc sách/truyện.</dd>
+                        </dl>
+                      </dd>
+                    </dl>
+                  </ul>
+            </div>
+            </div>
+          </div>
+    </div>
+    </div>
+    <!-- </div> -->
+    <br>
+    <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded" style="height: 800px;background: url(Beach.avif);background-size: cover;">
+      <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#Header">Trang chủ</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Gói du lịch</li>
+        </ol>
+      </nav>
+      <h2 style="color: #B3D8A8;">Gói du lịch <span class="badge text-bg-secondary">Mới!</span></h2>
+      <!-- <img width="500px" style="position: relative;left:540px;" src="aircraft-6314377_1280.jpg" " alt="..."> -->
+      <div id="Travel_packs">
+        <div class="card Packs" style="width: 18rem;">
+          <img src="https://blog.gomosafer.com/wp-content/uploads/2024/02/online-travel-company.jpg"  class="card-img-top rounded-5 rounded-top-0 " alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Gói du lịch tiết kiệm (240.000 VNĐ)</h5>
+            <p class="card-text">Bao gồm : </p>
+            <ul class="list-group">
+              <li class="list-group-item">Một vé máy bay hạng phổ thông</li>
+              <li class="list-group-item">Một voucher giảm 30% cho một chuyến đi </li>
+            </ul>
+            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop" style="display: flex;justify-self: center;">Mua ngay</button>
+            
+            <div class="offcanvas offcanvas-top" style="height: 500px;" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel" >
+              <div class="offcanvas-header">
+                Mua gói : Gói du lịch tiết kiệm (240.000 VNĐ)
+              </div>
+              <div class="offcanvas-body" >
+                <form>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Email</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" >
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                  </div>
+                  <div class="form-group">
+                    <label for="Name">Tên</label>
+                    <input type="Name" class="form-control" id="Name" placeholder="Tên" >
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Mật khẩu</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Mật khẩu" >
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Nhớ tôi</label>
+                  </div>
+                  <button type="button" class="btn btn-primary" popovertarget="mypopover 3 popover" >Mua gói này</button>
+                  <div id="mypopover 3 popover" popover style="border:none;">
+                    <div class="alert alert-success bs-success-border-subtle" role="alert"  >
+                      Mua gói thành công !<img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/checkmark--v1.png" alt="checkmark--v1"/>
+                    </div>
+                  </div>
+                </form>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card col align-self-center Packs" style="width: 18rem;">
+            <img src="https://vcdn1-vnexpress.vnecdn.net/2024/09/13/z5825972368646-e21cf7475b052d7-8796-9342-1726206291.jpg?w=460&h=0&q=100&dpr=2&fit=crop&s=YlhAqZWTAOh-9eU2zYgZkQ"class="rounded-5 rounded-top-0"  alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Gói du lịch sinh viên (250.000 VNĐ)</h5>
+              <p class="card-text">Bao gồm :</p>
+              <ul class="list-group">
+                <li class="list-group-item">Một vé tàu lửa giường nằm</li>
+                <li class="list-group-item">Vé khách sạn 3 sao</li>
+                <li class="list-group-item">Một voucher giảm 20% cho một chuyến đi </li>
+              </ul>
+              <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop1" aria-controls="offcanvasTop1" style="display: flex;justify-self: center;">Mua ngay</button>
+              <div class="offcanvas offcanvas-top" style="height: 500px;" tabindex="-1" id="offcanvasTop1" aria-labelledby="offcanvasTopLabel">
+                <div class="offcanvas-header">
+                  Mua gói : Gói du lịch sinh viên (250.000 VNĐ)
+                </div>
+                <div class="offcanvas-body" >
+                  <form>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Email</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" >
+                      <small id="emailHelp" class="form-text text-muted">Chúng tôi sẽ không tiết lộ thông tin cá nhân của bạn</small>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Tên</label>
+                      <input type="Name" class="form-control" id="exampleInputPassword1" placeholder="Tên" >
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Mật khẩu</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Mật_khẩu" >
+                    </div>
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Nhớ tôi</label>
+                    </div>
+                    <button type="button" class="btn btn-primary" popovertarget="mypopover 2 popover">Mua gói này</button>
+                    <div id="mypopover 2 popover" popover style="border:none;">
+                      <div class="alert alert-success bs-success-border-subtle" role="alert"  >
+                        Mua gói thành công !<img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/checkmark--v1.png" alt="checkmark--v1"/>
+                      </div>
+                    </div>
+                  </form>
+                  
+                </div>
+              </div>
+            </div>
+          </div>  
+        <div class="card Packs" style="width: 18rem;">
+          <img src="https://dulichviet.com.vn/images/bandidau/dia-diem-tham-quan-trong-tour-du-lich-khach-doan-vo-cung-phong-phu.jpg" class="card-img-top rounded-5 rounded-top-0" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Gói du lịch đoàn (450.000 VNĐ)</h5>
+            <p class="card-text">Bao gồm : </p>
+            <ul class="list-group">
+              <li class="list-group-item">Ba vé máy bay thương gia </li>
+              <li class="list-group-item">Vé tour du lịch 3 người</li>
+              <li class="list-group-item">Một voucher giảm 34% cho một chuyến đi </li>
+            </ul>
+            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop2" aria-controls="offcanvasTop2" style="display: flex;justify-self: center;">Mua ngay</button>
+              <div class="offcanvas offcanvas-top" style="height: 500px;" tabindex="-1" id="offcanvasTop2" aria-labelledby="offcanvasTopLabel">
+                <div class="offcanvas-header">
+                  Mua gói : Gói du lịch đoàn (450.000 VNĐ)
+                </div>
+                <div class="offcanvas-body" >
+                  <form>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Email</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" >
+                      <small id="emailHelp" class="form-text text-muted">Chúng tôi sẽ không tiết lộ thông tin cá nhân của bạn</small>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Tên</label>
+                      <input type="Name" class="form-control" id="exampleInputPassword1" placeholder="Tên" >
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Mật khẩu</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Mật khẩu" >
+                    </div>
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Nhớ tôi</label>
+                    </div>
+                    <button type="button" class="btn btn-primary" popovertarget="mypopover 1 popover">Mua gói này</button>
+                    <!-- <div id="mypopover " popover>
+                      <div class="alert alert-success bs-success-border-subtle" role="alert" style="width: 1700px;">
+                        <h1><i class="fa-sharp-duotone fa-solid fa-square-check fa-spin-pulse" style="--fa-primary-color: #00faaf; --fa-secondary-color: #00faaf;"></i></h1>
+                      </div> -->
+                      <div id="mypopover 1 popover" popover style="border:none;">
+                        <div class="alert alert-success bs-success-border-subtle" role="alert"  >
+                          Mua gói thành công !<img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/checkmark--v1.png" alt="checkmark--v1"/>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </form>
+                  
+                </div>
+              </div>
+          </div>
+        </div>  
+      </div>
+    </div>
+    <div class="shadow p-3 mb-5 bg-success-subtle rounded  " style="margin-top: 100px;">
+      <h1 class="lato-regular-italic " >Trở thành một thành viên trong web<span style="border: 1px rgb(41, 190, 196) solid;" class="badge text-bg-secondary ">Được gợi ý</span></h1>
+       <div id="Sign_up" style="justify-self: center;">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Đăng kí</button>
+    </div>
+      <br>
+      <h1 class="display-3" id="Title_About_us" style="border: 2px #D84040 solid ;border-radius:50px;text-align: center;">---Bạn đã có tài khoản ?---</h1>
+      <div id="Login" style="justify-self: center;">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1" data-bs-whatever="@getbootstrap">Đăng nhập</button>
+    </div>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Đăng kí</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="name" class="col-form-label">Tên</label>
+                <input type="text" class="form-control" id="recipient-name" placeholder="Nhập tên của bản" >
+              </div>
+              <div class="mb-3">
+                <label for="email" class="col-form-label">Email:</label>
+                <input type="email" class="form-control" id="recipient-email" placeholder="Nhập Email của bạn" >
+              </div>
+              <div class="mb-3">
+                <label for="password" class="col-form-label">Mật khẩu</label>
+                <input type="password" class="form-control form-control-sm" id="password" placeholder="Nhập mật khẩu của bạn" >
+              </div>
+              <div class="mb-3">
+                <label for="Birthday" class="col-form-label">Mật khẩu</label>
+                <input type="date" class="form-control form-control-sm" id="Birthday" placeholder="Nhập ngày sinh nhật của bạn " >
+              </div>
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Chọn quốc tịch của bạn</option>
+                <option value="1">Anh</option>
+                <option value="2">Pháp</option>
+                <option value="3">Mỹ</option>
+                <option value="4">Việt Nam</option>
+                <option value="5">Trung Quốc</option>
+                <option value="5">Nga</option>
+              </select>
+              <div class="mb-3">
+                <label for="Nation" class="col-form-label">Other Nation:</label>
+                <input type="text" class="form-control form-control-sm" id="Nation" placeholder="Enter your Nation">
+                <br>
+                <button type="button" class="btn btn-danger position-relative">
+                  Không bắt buộc !
+                  <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+                    <span class="visually-hidden">New alerts</span>
+                  </span>
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+            <button type="button" class="btn btn-outline-success" popovertarget="mypopover popover">Đăng kí</button>
+            <div id="mypopover popover" popover style="border:none;">
+              <div class="alert alert-success bs-success-border-subtle" role="alert" style="border:none;">
+                Đăng kí thành công ! <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/checkmark--v1.png" alt="checkmark--v1"/>
+              </div>
+                
+              
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Đăng kí</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="email" class="col-form-label">Email:</label>
+                <input type="email" class="form-control" id="recipient-email" placeholder="Nhập Email của bạn" >
+              </div>
+              <div class="mb-3">
+                <label for="password" class="col-form-label">Mật khẩu:</label>
+                <input type="password" class="form-control form-control-sm" id="password" placeholder="Nhập mật khẩu của bạn" >
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+            <button type="" class="btn btn-outline-success" popovertarget="mypopover 4 popover">Đăng nhập</button>
+            <div id="mypopover 4 popover" popover style="border:none;">
+              <div class="alert alert-success bs-success-border-subtle" role="alert"  style="border:none;">
+                Đăng nhập thành công ! <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/checkmark--v1.png" alt="checkmark--v1"/>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+</body>
+</html>
+<script>
+  function Show_content(){
+    document.getElementById("Move1").style.animation="Animation1";
+    document.getElementById("Move1").style.animationDuration="2s";
+    document.getElementById("Move1").style.animationFillMode="forwards";
+    document.getElementById("Move2").style.animation="Animation2";
+    document.getElementById("Move2").style.animationDuration="2s";
+    document.getElementById("Move2").style.animationFillMode="forwards";
+    document.getElementById("Move3").style.animation="Animation2";
+    document.getElementById("Move3").style.animationDuration="2s";
+    document.getElementById("Move3").style.animationFillMode="forwards";
+    document.getElementById("About_us").style.animation="Enlarge";
+    document.getElementById("About_us").style.animationDuration="2s";
+    document.getElementById("About_us").style.animationTimingFunction="cubic-bezier(0.455, 0.03, 0.515, 0.955)";
+    document.getElementById("About_us").style.animationFillMode="forwards"
+    document.getElementById("Button").style.animation="Animation";
+    document.getElementById("Button").style.animationDuration="2s";
+    document.getElementById("Button").style.animationFillMode="forwards";
+  }
+  function Expand(){
+    document.getElementById("Container").style.animation="Expand";
+    document.getElementById("Container").style.animationDuration="2s"
+    document.getElementById("Container").style.animationFillMode="forwards"
+  }
+  function Revert(){
+    document.getElementById("Container").style.animation="Expand";
+    document.getElementById("Container").style.animationDuration="2s"
+    document.getElementById("Container").style.animationDirection="reverse"
+    document.getElementById("Container").style.animationFillMode="forwards"
+  }
+//   const popover = new bootstrap.Popover('.popover-dismiss', {
+//   trigger: 'focus'
+// })
+</script>
+<link
+    href="https://fonts.googleapis.com/css2?family=Playwrite+VN:wght@100..400&family=Quicksand:wght@300..700&display=swap"
+    rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
